@@ -1,1 +1,1 @@
-web: lein run -m practice.web
+web: lein run -m practice.server
