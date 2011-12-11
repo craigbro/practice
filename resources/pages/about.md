@@ -6,11 +6,11 @@ priority is.
 
 I have worked as a software developer for years, the last couple years
 being in a sector of the industry that really enjoys its secrets.  I
-did share a few bits of software, but I have bever been good at it.
+did share a few bits of software, but I have never been good at it.
 
 I have shared my thoughts in writing on mailing lists, and in other
-shortened forms, but have never been good at writing out the more
-complicated thoughts, or diving deeply into the simple ones.
+shortened forms, but have seldom laid out the more complicated
+thoughts, or dove deeply into the simple ones.
 
 ### The Software
 
