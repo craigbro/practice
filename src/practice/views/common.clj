@@ -35,10 +35,10 @@
       (sidebar)]
      (footer)]]))
      
-
 (defpartial post-short [post]
   [:div.post-short
-   [:h2.post-title (post-title post)]
+   [:h2.post-title
+    [:a {:href (str "/posts/" (:name post))} (post-title post)]]
    [:div.post
     (post-body post)]])
 
@@ -47,3 +47,5 @@
    [:h2.post-title (post-title post)]
    [:div.post
     (post-body post)]])
+
+  

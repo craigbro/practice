@@ -8,16 +8,17 @@ I have worked as a software developer for years, the last couple years
 being in a sector of the industry that really enjoys its secrets.  I
 did share a few bits of software, but I have bever been good at it.
 
-
-* Writing
+I have shared my thoughts in writing on mailing lists, and in other
+shortened forms, but have never been good at writing out the more
+complicated thoughts, or diving deeply into the simple ones.
 
 ### The Software
 
 The entire site, content included, is available at:
 
-[http://www.github.com/craigbro/practice](http://www.github.com/craigbro/practice)
+[https://www.github.com/craigbro/practice](https://www.github.com/craigbro/practice)
 
-It's written in [Clojure](http://www.cljure.org), and uses the
+It's written in [Clojure](http://www.clojure.org), and uses the
 [Noir](www.webnoir.org) web framework.  All posts and pages are files,
 and there is no database.  The CSS theme was given to the world by
-[Leo Babauta](http://zenhabits.com/theme).
+[Leo Babauta](http://zenhabits.net/theme).
