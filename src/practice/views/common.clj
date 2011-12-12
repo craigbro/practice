@@ -40,12 +40,16 @@
    [:h2.post-title
     [:a {:href (str "/posts/" (:name post))} (post-title post)]]
    [:div.post
-    (post-body post)]])
+    (post-body post)
+    [:div.post-footer
+     [:p (str "Posted: " (:date (:metadata post)))]]]])
 
 (defpartial post-full [post]
   [:div.post-full
    [:h2.post-title (post-title post)]
    [:div.post
-    (post-body post)]])
+    (post-body post)
+        [:div.post-footer
+     [:p (str "Posted: " (:date (:metadata post)))]]]])
 
   

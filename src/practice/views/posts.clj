@@ -7,9 +7,11 @@
 
 (defpage [:get "/"] []
   (common/layout "Practice Blog"
-                 (map
-                  #(common/post-short %1)
-                  posts)))
+                 (interpose
+                  [:hr.post-sep]
+                  (map
+                   #(common/post-short %1)
+                   posts))))
 
 (defn show-post
   "Show the full version of the post"

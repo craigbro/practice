@@ -6,8 +6,10 @@
 (defn load-all-post-metadata []
   (let [p (re-pattern "\\.")]
     (reverse
-     (sort-by
-      :date
+     (sort
+      (fn [a b]
+        (compare (java.util.Date. (:date (:metadata a)))
+                 (java.util.Date. (:date (:metadata b)))))
       (map
        (fn [fname]
          {:tag ::post
@@ -19,7 +21,9 @@
                                      .readLine))
           })
        (filter
-        #(not (re-matches (re-pattern ".*~") %))
+        #(not (or (re-matches (re-pattern ".*~") %)
+                  (re-matches (re-pattern "#.*") %))
+              )
         (.list (java.io.File. (str post-dir ".")))))))))
   
 (def posts (load-all-post-metadata))

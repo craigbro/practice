@@ -1,4 +1,4 @@
-{:date "2011/12/01" :author "Craig Brozefsky" :title "First Steps"}
+{:date "2011/12/10" :author "Craig Brozefsky" :title "First Steps"}
 
 I am building a simple blog app using
 [Clojure](http://www.clojure.org) and [Noir](http://www.webnoir.org).
