@@ -13,10 +13,7 @@
     [:ul
      [:li [:a {:href "/"} "Home" ]]
      [:li [:a {:href "/about"} "About" ]]
-     [:li "Email: craig@red-bean.com"]
-     [:li "Twitter:"
-      [:a {:href "http://twitter.com/cbrozefsky"}
-       "@cbrozefsky"]]
+     [:li [:a {:href "/feedback"} "Feedback" ]]
      ]
     ]
    ])
@@ -46,7 +43,8 @@
    [:div.post
     (post-body post)
     [:div.post-footer
-     [:p (str "Posted: " (:date (:metadata post)))]]]])
+     [:p (str "Posted: " (:date (:metadata post)))
+      [:a.feedback-link {:href "/feedback"} "Feedback"]]]]])
 
 (defpartial post-full [post]
   [:div.post-full

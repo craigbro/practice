@@ -8,4 +8,8 @@
 (defpage [:get "/about"] []
   (common/layout "About"
                  (page-body (lookup-page "about"))))
+
+(defpage [:get "/feedback"] []
+  (common/layout "Feedback"
+                 (page-body (lookup-page "feedback"))))
                   
