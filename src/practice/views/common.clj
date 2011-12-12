@@ -13,6 +13,10 @@
     [:ul
      [:li [:a {:href "/"} "Home" ]]
      [:li [:a {:href "/about"} "About" ]]
+     [:li "Email: craig@red-bean.com"]
+     [:li "Twitter:"
+      [:a {:href "http://twitter.com/cbrozefsky"}
+       "@cbrozefsky"]]
      ]
     ]
    ])
@@ -49,7 +53,7 @@
    [:h2.post-title (post-title post)]
    [:div.post
     (post-body post)
-        [:div.post-footer
+    [:div.post-footer
      [:p (str "Posted: " (:date (:metadata post)))]]]])
 
   

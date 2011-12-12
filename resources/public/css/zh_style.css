@@ -51,6 +51,8 @@ a:hover {color: #000; text-decoration: none; border:0; border-width: 0 0 0 0; bo
 .post a:visited {color: #505050; text-decoration: none; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0;}
 .post a:hover {color: #999; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0; text-decoration: none;}
 
+.post-footer p {color: #999;}
+
 .post ul{padding: .5em 0em 1em 3.2em; font: 20px Hoefler Text, Georgia, bodyfont, serif;}
 .post li{line-height: 29px; padding: 4px 0 0 0;}
 .post ol{padding: .5em 0em 0em 3.2em; font: 20px Hoefler Text, Georgia, bodyfont, serif;;}
