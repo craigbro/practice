@@ -1,5 +1,9 @@
 ## About This Practice
 
+*  [Email](mailto:craig@red-bean.com?subject=Practice")
+*  Twitter: [@cbrozefsky](http://twitter.com/cbrozefsky)
+*  Home Page: [www.red-bean.com/~craig](http://www.red-bean.com/~craig)
+
 I am practicing the act of sharing, with the hope of getting better at
 it.  For me, the desire to share is not new, but making it a core
 priority is.
@@ -11,6 +15,10 @@ did share a few bits of software, but I have never been good at it.
 I have shared my thoughts in writing on mailing lists, and in other
 shortened forms, but have seldom laid out the more complicated
 thoughts, or dove deeply into the simple ones.
+
+
+
+
 
 ### The Software
 
