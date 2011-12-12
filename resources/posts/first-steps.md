@@ -7,6 +7,11 @@ It runs from a git repo. Pages and posts are files I can edit in
 [Heroku](http://www.heroku.com), who graciously provides free hosting
 for small projects like this.
 
+The entire site, content included, is available at:
+
+[https://www.github.com/craigbro/practice](https://www.github.com/craigbro/practice)
+
+
 I'm doing this because I want a space to practice my sharing, my
 writing.  Part of that is developing a voice that can carry more than
 a tweet or an email conversation.  I wrote my own blog software
