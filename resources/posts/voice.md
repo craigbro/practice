@@ -6,9 +6,9 @@ voice](https://en.wikipedia.org/wiki/Istv%C3%A1n_M%C3%A9sz%C3%A1ros_%28professor
 
 It was [someone I admire](http://leobabauta.com/bio.html) and whose
 [writings](http://www.marxists.org/archive/marx/works/) have been a
-part of my thoughts for over a decade.  I was soon filled with a sense
-of dread.  How would I live up to such a voice?  Was that really the
-voice I needed now?
+part of my thought for over a decade.  I was then filled with a sense
+of dread.  How could I live up to such a voice?  Was that really the
+voice I needed?
 
 The dread turned into frustration, then a sense of being overwhelmed
 by the scope of what I wanted to write about.  In my mind, the phrase:
@@ -16,8 +16,8 @@ by the scope of what I wanted to write about.  In my mind, the phrase:
 > I want to create a historically maintainable, hegemonic alternative
 > to the social-metabolic order of capitalism.
 
-is sensible, precise, and inspiring.  I doubt it rings like that in
-other ears though.  I thought I would explain all the terms, unpack
+sounded sensible, precise, and inspiring.  I doubt it rings like that
+in other ears though.  I thought I would explain all the terms, unpack
 it.  Soon I was planning out a grand essay, or a book.  I would have
 to be rigorous and extensive in my presentation of my thought.  I
 would have to defend it against critics who had no interest in
@@ -27,7 +27,7 @@ So I took a break and had a beer.
 
 # The Conversational Voice
 
-I get into conversations at bars frequently.  I am careful, I start
+I get into conversations at bars frequently.  I am careful. I start
 slowly, let questions indicate further interest, and I limit my scope
 and detail to appropriate levels.
 
