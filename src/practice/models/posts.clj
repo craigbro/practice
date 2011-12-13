@@ -22,7 +22,8 @@
           })
        (filter
         #(not (or (re-matches (re-pattern ".*~") %)
-                  (re-matches (re-pattern "#.*") %))
+                  (re-matches (re-pattern "#.*") %)
+                  (re-matches (re-pattern "\\.*") %))
               )
         (.list (java.io.File. (str post-dir ".")))))))))
   
