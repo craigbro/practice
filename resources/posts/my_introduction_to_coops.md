@@ -13,7 +13,7 @@ similar ideas.  They also helped me plan the next steps, namely
 developing my ideas some more, and in more concrete terms, and finding
 other people.
 
-I spent the day following the breadcrumbs they provides, and here are
+I spent the day following the breadcrumbs they provided, and here are
 the results:
 
 # Definitions of Worker Cooperatives
@@ -44,8 +44,8 @@ It is a survey of three worker coops, and includes a quick reading
 introduction to the authors analytic model, which is based on Edgar
 Shein's work on organization culture.
 
-In the Edgar Schein's model of organizations, the *Basic Assumptions*
-are pre-conscious, invisible, or taken for granted, but are also the
+In Edgar Schein's model of organizations, the *Basic Assumptions* are
+pre-conscious, invisible, or taken for granted, but are also the
 foundation for the value system and cultural justifications of the
 work.  Presented as examples of such assumptions are:
 
