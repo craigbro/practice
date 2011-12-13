@@ -74,5 +74,5 @@ This makes me ask a few questions:
 I suppose these are rather basic questions within the field of
 organizational culture, but I'm not familiar with the literature.  The
 model also reminds me of the kind of analysis Istvan Meszaros has done
-in [Social Structure and Forms of Consciousness].
+in **Social Structure and Forms of Consciousness**.
 
