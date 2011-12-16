@@ -36,7 +36,7 @@ It can be like reading something as operationally simple as Three
 Little Pigs in the formalized language of legal briefings.
 
 You want to track just one simple thread of information propagation,
-or execution, and end up touching 10 files.  You end up with almost as
+or execution, and end up touching 10 files.  Your emacs has almost as
 many buffers open as you have lines in the stack trace!  
 
 Ok, so I'm describing the absurd ends of this tendency to complexify
