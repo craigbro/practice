@@ -5,6 +5,16 @@
         hiccup.core
         hiccup.page-helpers))
 
+
+(def site-title "Practice")
+
+(def site-tagline "A place to share")
+
+(def site-owner "Craig Brozefsky")
+
+(def site-owner-email "craig@red-bean.com")
+
+
 (defn server-name []
   (:server-name noir.request/*request*))
 
@@ -22,9 +32,8 @@
   
 (defpartial sidebar []
   [:section#sidebar
-   [:h1 "Practice"]
-   [:p#tagline
-    "A place to share"]
+   [:h1 site-title ]
+   [:p#tagline site-tagline]
    [:nav
     [:ul
      [:li [:a {:href "/"} "Home" ]]
@@ -46,7 +55,7 @@
     [:title title]
     [:link {:rel "alternate"
             :type "application/rss+xml"
-            :title "Practice Blog"
+            :title site-title
             :href (str (server-url) "/rss")}]
     ]
    [:body

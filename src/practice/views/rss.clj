@@ -4,16 +4,14 @@
 ;;
 ;; This is a simple RSS feed generator that puts the blog posts in
 ;; reverse chrono order.  It's a full text feed, with the whole post
-;; in the description field.  I like prefer this as a user, as it
-;; means I can DL the feed and read offline, like on my phone with
-;; spotty reception.
+;; in the description field.  I prefer this as a user, as it means I
+;; can DL the feed and read offline, like on my phone with spotty
+;; reception.
 
 (ns practice.views.rss
   (:use noir.core
-        noir.request
         practice.models.posts
-        practice.views.common
-        hiccup.core)
+        practice.views.common)
   (:require [clojure.xml :as xml]))
 
 (def max-posts
@@ -26,16 +24,19 @@
     "EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z",)
    date))
 
+(defn owner []
+  (str site-owner-email " (" site-owner ")"))
+
 (defn blog-channel [items]
   {:tag "channel"
    :content (concat
-             [{:tag "title" :content ["Practice Blog"]}
+             [{:tag "title" :content [site-title]}
               {:tag "link" :content [(server-url)]}
               {:tag "language" :content ["en-us"]}
-              {:tag "webMaster" :content ["craig@red-bean.com (Craig Brozefsky)"]}
-              {:tag "managingEditor" :content ["craig@red-bean.com (Craig Brozefsky)"]}
+              {:tag "webMaster" :content [(owner)]}
+              {:tag "managingEditor" :content []}
               {:tag "copyright" :content ["Public Domain"]}
-              {:tag "description" :content ["A place to prace sharing."]}]
+              {:tag "description" :content [site-tagline]}]
              items)})
 
 (defn post-rss-item [p]
