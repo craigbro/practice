@@ -10,6 +10,7 @@
 
 (ns practice.views.rss
   (:use noir.core
+        hiccup.core
         practice.models.posts
         practice.views.common)
   (:require [clojure.xml :as xml]))
