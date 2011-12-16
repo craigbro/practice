@@ -27,7 +27,12 @@
   (html5
    [:head
     (include-css "/css/zh_style.css")
-    [:title title]]
+    [:title title]
+    [:link {:rel "alternate"
+            :type "application/rss+xml"
+            :title "Practice Blog"
+            :href "http://practice.kokonino.net/rss"}]
+    ]
    [:body
     [:div#container
      [:div#content

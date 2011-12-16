@@ -36,5 +36,10 @@
   (let [[data text] (clojure.string/split (slurp (str post-dir (:filename post))) (re-pattern "\n|\r\n") 2)]
     (.markdown (com.petebevin.markdown.MarkdownProcessor.) text)))
 
+(defn post-text [post]
+  (let [[data text] (clojure.string/split (slurp (str post-dir (:filename post))) (re-pattern "\n|\r\n") 2)]
+    text))
+  
+
 (defn post-title [post]
   (or (:title (:metadata post)) (:name post)))
