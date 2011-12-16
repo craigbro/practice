@@ -1,0 +1,167 @@
+{:date "2011/12/16" :author "Craig Brozefsky" :title "Tension Between Text and Taxonomy"}
+
+I just added the [RSS feed](/rss) support, and in the process of doing
+another round of work on my blog app, I found that I was wavering
+back and forth on some decisions about how to write the code.  I was
+trying to find a sweet spot between the readability of the code as
+text, and the modularity or structure of the code as functions,
+namespaces, and such.
+
+## Taxonomy
+
+We often think of the semantic, and runtime organization of the code
+as the primary arena for expressing quality in the code. We ask questions like:
+
+* Are my classes properly identified? 
+* Are my interfaces composable?
+* Do they my interfaces leak implementation assumptions?
+* Do my implementations assume things the interface does not guarantee or express?
+
+I'm gonna call this the Taxonomy pole -- breaking the system into
+parts, naming them, defining their operation as distinct from the rest
+of the complex system they are embedded in, so that they can be
+removed from it and plopped into another one.
+
+In the effort to get all of our components un-entangled, we find
+ourselves isolating decisions and assumptions into their own blocks.
+We get a proliferation of small interfaces to isolate components that
+are very unlikely to ever be used distinctly from one another.  We
+define configuration variables that are only used one.
+
+I have seen (and written) code where this tendency is expressed as a
+nearly impossible to navigate nested set of classes, with each class
+putting barely a gloss on the ones below it, sometimes doing nothing
+more than providing default args for the constructor, or some methods.
+It can be like reading something as operationally simple as Three
+Little Pigs in the formalized language of legal briefings.
+
+You want to track just one simple thread of information propagation,
+or execution, and end up touching 10 files.  You end up with almost as
+many buffers open as you have lines in the stack trace!  
+
+Ok, so I'm describing the absurd ends of this tendency to complexify
+in the name of abstracting, isolating, and decomposing semantics
+components of the code.
+
+## Text
+
+We have style guides, and conventions just like journalists and other
+writers.  Ways of formatting the code to make it easier to scan and
+move through.  Some go so far as to embed the program in a descriptive
+text, literate programming.
+
+The tools for LP have to provide a way of resolving the tension
+between the order of presentation and narrative targeting a human
+reader.  [CWEB](http://www-cs-staff.stanford.edu/~uno/cweb.html) for
+example let's you tell it where the code snippet goes when compiled.
+This lets you present the reader something and then define it's
+dependencies afterwards.  The compiler/runtime are going to want that
+done the other way around in most languages.
+
+This is one vector of tension between Taxonomy and Text, *order of
+presentation*.
+
+In some systems I have worked in, you come to the project and fall
+into a directory full of classes or modules.  Maybe a README tells you
+where to start reading, but then it's jumping around attempting to
+turn this collection of objects into threads of execution and
+information flow.
+
+This is another vector of tension, *lack of narrative*.
+
+Unlike a narrative presentation, there is little redundancy, or
+re-presentation of something within the multiple contexts it is used.
+The DRY principle can result in the human reader having to maintain a
+giant state table in their brain to do something computers do almost
+for free, interpolate values.  Hopefully the names of variables and
+such are well-chosen, but that only helps so much.
+
+And another vector of tension, *interpolative overhead*.
+
+Because our text is laid out in files that usually map to classes or
+modules, we have to jump around.  Our IDEs or editors can make this
+easier, but even a single click to find referrers of a symbol doesn't
+stop the cognitive jolt of jumping to a huge list of references or a
+new source file.
+
+This vector of tension I call *textual disjunction*.
+
+Lastly, we get an idea of all the parts of the animal, but it requires
+much closer reading to get an inkling of how they fit together beyond
+the level of gross anatomy.  Our languages, OO in particular,
+empahsizes the definition of what exists, the ontology of our problem
+domain, but very poor tools for describing the dynamics of
+the composition of those things.
+
+This vector of tension I think of as *ontological fixation*.
+
+Ok, so these vectors of tension are not earth-shattering conflicts, or
+roadblocks.  We obviously all work through them to various degrees of
+success.  I'm not trying to point out some failing of OO, or other
+crisis of software development.
+
+So if there is not a global software crisis that is going to cost *ALL
+THE JOBS*, or something like that, why am I bringing this up?
+
+## Textual Specificity
+
+So you built your conglomerative app, layers of frameworks, each with
+their own properties file, and you have config files for each dev
+environment.  They tell the pieces how to fall together, which
+"Factory" object should create what class when asked for something
+implementing the "Foo" interface.
+
+You re-use code by pulling in frameworks that are targeting a general
+problem, which target an abstraction of the actual problem you face.
+Then you either shoehorn your real problem to fit the abstraction,
+with glue classes and other connective tissue prone to inflammation.
+
+I've done this for years, and while you can get it to work most of the
+time, it's frustrating to work with, confuses the hell out of people,
+and prone to both bugs and a kind of textual ossification due to
+abstraction overload and impedance mismatch.
+
+What alternative is there?
+
+Well, I'm thinking of something, I'll call it textual specificity for
+now.  It means re-using code that way story tellers re-use characters
+and plot devices and narrative elements.  
+
+They don't refer to some set of paragraphs in another book with the
+canonical specification and description of the "uptight, overly
+pedantic git" character.  They take the archetype, and rewrite it to
+fit their tone, and mutate it to mesh with the context/storyline they
+are weaving.
+
+As a culture, programmers frown on that, and unless there is
+significant re-writing we would deride it as cut and paste coding.
+
+What if textual recombination, and I don't mean macros, was our way of
+re-using code?  Read the code that solves a similar problem, and then
+write a version of it tuned to your specific problem, to the reality
+your program has to interact with.  
+
+Sure, someone has to read your code and maintain it, but when the
+cost/benefit ratio for adding yet another gem dependency to my Rails
+or Java app is so bad, I'll take a chance getting my code write
+vs. juggling deps across version incompatibilities in a massive
+ecosystem.  
+
+I want to spend my time getting my code to match my problem, not spend
+it fighting off death by a thousand impedance mismatch papercuts
+within my cloud of overstuffed frameworks.
+
+Ok, this is starting to sound like [Programming,
+Motherfucker](http://programming-motherfucker.com/) rant.  Probably
+should wrap it up.
+
+There is no crisis, and this is no panacea, and Textual Specificity can
+swerve off the road and into the ditch of "Not Invented Here" and the
+fragmentation of community that plagued the Common Lisp.  
+
+I'm suggesting we keep in mind that our programs are texts, and that
+the suppleness of their form comes not from the generality of the
+abstractions we compose them from, but from the clarity and fit with
+which they interface with their ecological niche.
+
+Hows that for miscegenating metaphors.  Sleep calls.
