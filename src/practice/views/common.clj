@@ -1,9 +1,25 @@
 (ns practice.views.common
   (:use noir.core
+        noir.request
         practice.models.posts
         hiccup.core
         hiccup.page-helpers))
 
+(defn server-name []
+  (:server-name noir.request/*request*))
+
+(defn server-port []
+  (:server-port noir.request/*request*))
+
+(defn server-scheme []
+  (if (= (:scheme noir.request/*request*)
+         :https)
+    "https://"
+    "http://"))
+
+(defn server-url []
+  (str (server-scheme) (server-name) ":" (server-port)))
+  
 (defpartial sidebar []
   [:section#sidebar
    [:h1 "Practice"]
@@ -31,7 +47,7 @@
     [:link {:rel "alternate"
             :type "application/rss+xml"
             :title "Practice Blog"
-            :href "http://practice.kokonino.net/rss"}]
+            :href (str (server-url) "/rss")}]
     ]
    [:body
     [:div#container
